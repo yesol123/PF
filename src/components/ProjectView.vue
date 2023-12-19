@@ -92,7 +92,7 @@ project: [
     mine: "Vue.js를 이용한 포트폴리오 작업",
     planContinued: `안녕하세요, 김예솔입니다`,
     environment: "Html, Css/Scss, Vue.js",
-    view: "beamish-kleicha-f97e7d.netlify.app",
+    view: "https://yesol.netlify.app/",
     github: 'https://github.com/yesol123/Portfolio'
   },
   {
