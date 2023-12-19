@@ -19,29 +19,32 @@
 </template>
 <script>
 export default {
-
-  data(){
+  data() {
     return {
-      currentScroll:0,
+      currentScroll: 0,
       underlineWidth: '50%',
-      isMobile : window.innerWidth <=768,
-    }
+      isMobile: window.innerWidth <= 768,
+    };
   },
-  watch:{
-    '$route'(){
-      this.inMobile = window.innerWidth <= 768;
+  watch: {
+    '$route'() {
+      this.isMobile = window.innerWidth <= 768;
     },
   },
-  
-  mounted(){
-    window.addEventListener("scroll",this.updateScroll);
-  },
-  unmounted(){
-    window.removeEventListener("scroll",this.updateScroll);
-  },
-  methods:{
 
-    scrollToMobile(v){
+  mounted() {
+    window.addEventListener('scroll', this.updateScroll);
+  },
+  unmounted() {
+    window.removeEventListener('scroll', this.updateScroll);
+  },
+  methods: {
+
+    scrollTo(v){
+      window.scrollTo({left:0,top:v,behavior:"smooth"})
+    },
+
+    scrollToMobile(v) {
       const headerHeight = document.querySelector('header').offsetHeight;
       let scrollToPosition;
 
@@ -50,7 +53,7 @@ export default {
           scrollToPosition = 0;
           break;
         case 'about':
-          scrollToPosition = 680;
+          scrollToPosition = 650;
           break;
         case 'project':
           scrollToPosition = 1350;
@@ -62,60 +65,60 @@ export default {
           scrollToPosition = 0;
       }
 
-      window.scrollTo({left:0,top:scrollToPosition - headerHeight,behavior:"smooth"})
+      window.scrollTo({ left: 0, top: scrollToPosition - headerHeight, behavior: 'smooth' });
     },
+
+
     updateUnderlineWidth(width) {
       this.underlineWidth = width;
     },
     updateScroll() {
-    this.currentScroll = window.scrollY || document.documentElement.scrollTop;
-    const isMobile = window.innerWidth <= 768; 
+      this.currentScroll = window.scrollY || document.documentElement.scrollTop;
+      const isMobile = window.innerWidth <= 768;
 
-    if (isMobile) {
-      // 모바일일 때 가로 길이와 activeSection을 조절
-      if (this.currentScroll >= 2610) {
-        this.updateUnderlineWidth('90%');
-        this.activeSection = 'contact';
-      } else if (this.currentScroll >= 1350) {
-        this.updateUnderlineWidth('75%');
-        this.activeSection = 'project';
-      } else if (this.currentScroll >= 680) {
-        this.updateUnderlineWidth('60%');
-        this.activeSection = 'about';
-      } else {
-        this.updateUnderlineWidth('50%');
-        this.activeSection = 'home';
-      }
-    } else {
-      if (this.currentScroll >= 2610) {
-        this.updateUnderlineWidth('90%');
-      } else if (this.currentScroll >= 1450) {
-        this.updateUnderlineWidth('75%');
-      } else if (this.currentScroll >= 750) {
-        this.updateUnderlineWidth('60%');
-      } else {
-        this.updateUnderlineWidth('50%');
-      }
-    }
-  },
-
-  },
-  computed:{
-    activeSection(){
-      if (this.isMobile) {
-          if (this.currentScroll >= 2500) return "contact";
-          else if (this.currentScroll >= 1350) return "project";
-          else if (this.currentScroll >= 680) return "about";
-          else return "home";
-        } else{
-          if(this.currentScroll>=2610) return "contact";
-          else if (this.currentScroll>=1450) return "project";
-          else if (this.currentScroll>=750) return "about";
-          else return "home"
+      if (isMobile) {
+        if (this.currentScroll >= 2610) {
+          this.updateUnderlineWidth('90%');
+          this.activeSection = 'contact';
+        } else if (this.currentScroll >= 1350) {
+          this.updateUnderlineWidth('75%');
+          this.activeSection = 'project';
+        } else if (this.currentScroll >= 650) {
+          this.updateUnderlineWidth('60%');
+          this.activeSection = 'about';
+        } else {
+          this.updateUnderlineWidth('50%');
+          this.activeSection = 'home';
         }
+      } else {
+        if (this.currentScroll >= 2610) {
+          this.updateUnderlineWidth('90%');
+        } else if (this.currentScroll >= 1450) {
+          this.updateUnderlineWidth('75%');
+        } else if (this.currentScroll >= 750) {
+          this.updateUnderlineWidth('65%');
+        } else {
+          this.updateUnderlineWidth('50%');
+        }
+      }
     },
-  }
-}
+  },
+  computed: {
+    activeSection() {
+      if (this.isMobile) {
+        if (this.currentScroll >= 2500) return 'contact';
+        else if (this.currentScroll >= 1350) return 'project';
+        else if (this.currentScroll >= 650) return 'about';
+        else return 'home';
+      } else {
+        if (this.currentScroll >= 2610) return 'contact';
+        else if (this.currentScroll >= 1450) return 'project';
+        else if (this.currentScroll >= 750) return 'about';
+        else return 'home';
+      }
+    },
+  },
+};
 </script>
 
 <style lang="scss">
