@@ -25,13 +25,6 @@ export default {
       currentScroll: 0,
       underlineWidth: '50%',
       isMobile: window.innerWidth <= 768,
-    
-    menuItems:[
-                { text: 'Home', link: '#home' },
-                { text: 'About', link: '#about' },
-                { text: 'Project', link: '#project' },
-                { text: 'Contact', link: '#contact' },
-    ],
     currentComponent: 'home' 
   };
   },
