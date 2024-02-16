@@ -1,5 +1,5 @@
 <template lang="">
-    <section class='projectdisplay' >
+    <section id="project" class='projectdisplay' >
       <div>    
       <h1>Work</h1>
           <article className='projectdisplay_item_flex'>
@@ -125,8 +125,7 @@ this.hoveredNum = null;
 
 <style lang="scss">
 .projectdisplay {
-// position: relative;
-padding: 50px 5px;
+padding: 80px 5px 5px 5px;
 background-color: #E6C2B5;
 width: 100%;
 div {

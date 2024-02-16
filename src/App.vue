@@ -4,11 +4,11 @@
       <div class='underline1' :style="{ width: underlineWidth }"></div>
       <nav>
         <p><span>YE-S</span></p>
-        <ul>
-          <li :class="{ active: isMobile ? activeSection === 'home' : activeSection === 'home' }" @click="isMobile ? scrollToMobile('home') : scrollTo(0)">HOME</li>
-          <li :class="{active: isMobile ? activeSection === 'about':activeSection ==='about'}" @click="isMobile ? scrollToMobile('about') : scrollTo(750)">ABOUT</li>
-          <li :class="{active: isMobile ? activeSection === 'project' : activeSection ==='project'}" @click="isMobile ? scrollToMobile('project') : scrollTo(1450)" >PROJECT</li>
-          <li :class="{active :isMobile ? activeSection === 'contact' : activeSection === 'contact'}" @click="isMobile ? scrollToMobile('contact') : scrollTo(2610)">CONTACT</li>
+        <ul id = "nav_bar">
+          <a href="#home"><li :class="{active:activeSection === 'home'}">HOME</li></a>
+          <a href="#about"><li :class="{active:activeSection === 'about'}">ABOUT</li></a>
+          <a href="#project"><li :class="{active:activeSection === 'project'}">PROJECT</li></a>
+          <a href="#contact"><li :class="{active:activeSection === 'contact'}">CONTACT</li></a>
         </ul>
       </nav>
     </div>
@@ -20,11 +20,20 @@
 <script>
 export default {
   data() {
-    return {
+
+   return {
       currentScroll: 0,
       underlineWidth: '50%',
       isMobile: window.innerWidth <= 768,
-    };
+    
+    menuItems:[
+                { text: 'Home', link: '#home' },
+                { text: 'About', link: '#about' },
+                { text: 'Project', link: '#project' },
+                { text: 'Contact', link: '#contact' },
+    ],
+    currentComponent: 'home' 
+  };
   },
   watch: {
     '$route'() {
@@ -39,35 +48,6 @@ export default {
     window.removeEventListener('scroll', this.updateScroll);
   },
   methods: {
-
-    scrollTo(v){
-      window.scrollTo({left:0,top:v,behavior:"smooth"})
-    },
-
-    scrollToMobile(v) {
-      const headerHeight = document.querySelector('header').offsetHeight;
-      let scrollToPosition;
-
-      switch (v) {
-        case 'home':
-          scrollToPosition = 0;
-          break;
-        case 'about':
-          scrollToPosition = 650;
-          break;
-        case 'project':
-          scrollToPosition = 1350;
-          break;
-        case 'contact':
-          scrollToPosition = 2610;
-          break;
-        default:
-          scrollToPosition = 0;
-      }
-
-      window.scrollTo({ left: 0, top: scrollToPosition - headerHeight, behavior: 'smooth' });
-    },
-
 
     updateUnderlineWidth(width) {
       this.underlineWidth = width;
@@ -158,7 +138,6 @@ button {
 }
 
 *section {
-
   margin: 0 auto;
   width: 80%;
 }
@@ -212,7 +191,7 @@ header {
         }
       }
 
-      ul {
+      #nav_bar {
         display: flex;
         justify-content: space-between;
         width: 60%;

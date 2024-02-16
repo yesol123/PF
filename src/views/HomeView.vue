@@ -1,5 +1,5 @@
 <template>
-  <section className='homedisplay'>
+  <section id="home" className='homedisplay'>
 
     <p>KIM YE-SOL</p>
     <div className='homedispay_1'>
@@ -40,14 +40,12 @@ export default {
     }
   },
   };
-
-
-
 </script>
 
 <style lang="scss">
 .homedisplay {
   height: 100vh;
+  padding-top: 50px;
   p {
     font-size: 180px;
   }

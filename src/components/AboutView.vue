@@ -1,5 +1,5 @@
 <template lang="">
-  <section class='aboutdisplay'>
+  <section id="about">
         <article class='aboutdisplay_1' >
           <h1>Skills</h1>
         <div class="flex">
@@ -162,9 +162,9 @@ article {
   margin: 20px;
 }
 
-.aboutdisplay {
+#about {
   display: flex;
-  padding: 50px 5px;
+  padding: 80px 5px 20px 5px;
   justify-content: space-between;
 
   .aboutdisplay_1 {
