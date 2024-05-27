@@ -1,24 +1,18 @@
 <template lang="">
     <section className='contactdisplay' id="contact">
-     <h1>contact</h1>
-       <article className='contactdisplay_1'>
-         <div className='contactdisplay_div1'>
-         <h3>이력서 다운로드</h3>
-          <button><img src="/img/Envelope_.png"/></button> 
-         </div>
-
-
-         <div className='contactdisplay_div2'>
-           <ul>
-            <li><a href="https://github.com/yesol123"><img src="/img/github_.png"/>https://github.com/yesol123</a></li>
-              <li><a href="#"><img src="/img/Globe_.png" />kys4255@naver.com</a></li>
-              <li><a><img src="/img/call.png" />010-4341-7321</a></li>
-              <li><a><img src="/img/location_.png" />경기도 성남시 중원구</a></li>
-           </ul>
-         </div>
-         
-       </article>
-     </section>
+        <h1>contact</h1>
+        <article className='contactdisplay_1'>
+            <div className='contactdisplay_div2'>
+            <ul>
+                <li><a href="https://github.com/yesol123"><img src="/img/github_.png"/>https://github.com/yesol123</a></li>
+                <li><a href="#"><img src="/img/Globe_.png" />kys4255@naver.com</a></li>
+                <li><a><img src="/img/call.png" />010-4341-7321</a></li>
+                <li><a><img src="/img/location_.png" />경기도 성남시 중원구</a></li>
+            </ul>
+            </div>
+            
+        </article>
+        </section>
 </template>
 <script>
 export default {
@@ -39,32 +33,11 @@ export default {
 
     .contactdisplay_1 {
         display: flex;
-        justify-content: center;
-        gap: 200px;
+        justify-content: flex-end;
+
         margin: 0;
         width: 90%;
         height: 200px;
-
-        .contactdisplay_div1 {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 30%;
-            border: 1px solid #CB2C23;
-
-            h3 {
-                color: #CB2C23;
-                font-family: 'GangwonEduPowerExtraBoldA';
-                margin: 0px 0px 10px 0px;
-            }
-
-            button {
-                border: 0;
-                background-color: transparent;
-                cursor: pointer;
-            }
-        }
 
         .contactdisplay_div2 {
             width: 30%;
