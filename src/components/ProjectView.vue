@@ -47,6 +47,18 @@ data() {
 return {
 project: [
   {
+          title: "부산광역시",
+          Fontfamily: 'GangwonEduPowerExtraBoldA',
+          image: "/img/busan_main.png",
+          description: "부산광역시 홈페이지 클론코딩",
+          plan: "기본적인 HTTML 구조 이해와 CSS 능력 향상",
+          mine: "메인페이지,분야별정보,챗봇기능(분야별정보)",
+          planContinued: `생애 최초의 코딩작업`,
+          environment: "Html, Css, Javascript,Swiper",
+          view: "https://yesol123.github.io/CloneCoding/",
+          github: 'https://github.com/yesol123/CloneCoding'
+        },
+  {
     title: "TODAY EAT",
     Fontfamily: 'PatuaOne',
     Fontfamily2: 'GangwonEduPowerExtraBoldA',
@@ -96,17 +108,19 @@ project: [
     github: 'https://github.com/yesol123/Portfolio'
   },
   {
-          title: "부산광역시",
-          Fontfamily: 'GangwonEduPowerExtraBoldA',
-          image: "/img/busan_main.png",
-          description: "부산광역시 홈페이지 클론코딩",
-          plan: "기본적인 HTTML 구조 이해와 CSS 능력 향상",
-          mine: "메인페이지,분야별정보,챗봇기능(분야별정보)",
-          planContinued: `생애 최초의 코딩작업`,
-          environment: "Html, Css, Javascript,Swiper",
-          view: "https://yesol123.github.io/CloneCoding/",
-          github: 'https://github.com/yesol123/CloneCoding'
-        },
+    title: "whatoeat",
+    Fontfamily: 'PatuaOne',
+    Fontfamily2: 'GangwonEduPowerExtraBoldA',
+    image: "/img/whatoeat.png",
+    description: "",
+    plan: "제철 요리사",
+    mine: "React-navtive를 이용한 토이프로젝트",
+    planContinued: `제철 식재료와 재료 고르는 꿀팁 나눔!`,
+    environment: "React-navtive, TypeScript",
+    view: "",
+    github: 'https://github.com/yesol123/whatoeat'
+  },
+
 ],
 hoveredNum: ""
 }
