@@ -108,13 +108,13 @@ project: [
     github: 'https://github.com/yesol123/Portfolio'
   },
   {
-    title: "whatoeat",
+    title: "whatoeat(진행중)",
     Fontfamily: 'PatuaOne',
     Fontfamily2: 'GangwonEduPowerExtraBoldA',
     image: "/img/whatoeat.png",
     description: "",
     plan: "제철 요리사",
-    mine: "React-navtive를 이용한 토이프로젝트",
+    mine: "React-navtive를 이용한 토이프로젝트 진행중입니다",
     planContinued: `제철 식재료와 재료 고르는 꿀팁 나눔!`,
     environment: "React-navtive, TypeScript",
     view: "",
