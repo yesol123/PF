@@ -200,7 +200,7 @@ article {
           width: 35%;
           margin: 5px 2px;
           border: 1px solid #CB2C23;
-          padding: 20px;
+          padding: 10px;
 
           >p {
             display: flex;
