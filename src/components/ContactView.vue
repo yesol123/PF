@@ -5,6 +5,7 @@
             <div className='contactdisplay_div2'>
             <ul>
                 <li><a href="https://github.com/yesol123"><img src="/img/github_.png"/>https://github.com/yesol123</a></li>
+                <li><a href="https://www.notion.so/front-end-192ab7370fc1800eaf87d668c4ab7cff"><img src="/img/notion.png"/>notion</a></li>
                 <li><a href="#"><img src="/img/Globe_.png" />kys4255@naver.com</a></li>
                 <li><a><img src="/img/call.png" />010-4341-7321</a></li>
                 <li><a><img src="/img/location_.png" />경기도 성남시 중원구</a></li>

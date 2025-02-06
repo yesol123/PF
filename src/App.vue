@@ -56,7 +56,7 @@ export default {
         } else if (this.currentScroll >= 1350) {
           this.updateUnderlineWidth('75%');
           this.activeSection = 'project';
-        } else if (this.currentScroll >= 650) {
+        } else if (this.currentScroll >= 450) {
           this.updateUnderlineWidth('60%');
           this.activeSection = 'about';
         } else {
@@ -68,8 +68,8 @@ export default {
           this.updateUnderlineWidth('90%');
         } else if (this.currentScroll >= 1450) {
           this.updateUnderlineWidth('75%');
-        } else if (this.currentScroll >= 750) {
-          this.updateUnderlineWidth('65%');
+        } else if (this.currentScroll >= 450) {
+          this.updateUnderlineWidth('60%');
         } else {
           this.updateUnderlineWidth('50%');
         }
@@ -81,12 +81,12 @@ export default {
       if (this.isMobile) {
         if (this.currentScroll >= 2500) return 'contact';
         else if (this.currentScroll >= 1350) return 'project';
-        else if (this.currentScroll >= 650) return 'about';
+        else if (this.currentScroll >= 450) return 'about';
         else return 'home';
       } else {
         if (this.currentScroll >= 2610) return 'contact';
         else if (this.currentScroll >= 1450) return 'project';
-        else if (this.currentScroll >= 750) return 'about';
+        else if (this.currentScroll >= 450) return 'about';
         else return 'home';
       }
     },
