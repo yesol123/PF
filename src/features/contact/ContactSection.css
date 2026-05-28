@@ -1,0 +1,43 @@
+.contactList {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+.contactList li {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.contactList li:last-child {
+  border-bottom: 0;
+}
+
+.contactList span {
+  color: var(--color-accent-secondary);
+  font-weight: 700;
+  font-family: inherit;
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.contactList a,
+.contactList p {
+  color: var(--color-text-muted);
+}
+
+.contactList a:hover {
+  color: var(--color-accent);
+}
+
+
+@media (max-width: 640px) {
+  .contactList li {
+    grid-template-columns: 1fr;
+    gap: var(--space-1);
+  }
+}

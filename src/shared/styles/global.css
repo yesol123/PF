@@ -1,0 +1,91 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      ellipse 80% 50% at 100% 0%,
+      color-mix(in srgb, var(--color-accent-secondary) 22%, transparent),
+      transparent
+    ),
+    radial-gradient(
+      ellipse 70% 45% at 0% 100%,
+      color-mix(in srgb, var(--color-accent-soft) 35%, transparent),
+      transparent
+    ),
+    linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-soft) 100%);
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li,
+span,
+strong {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+section {
+  min-height: 100vh;
+  min-height: 100dvh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: calc(var(--header-height) + var(--space-5)) var(--space-5)
+    var(--space-6);
+  scroll-margin-top: var(--header-height);
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-snap-type: none;
+  }
+}

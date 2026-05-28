@@ -1,0 +1,72 @@
+.aboutBody {
+  color: var(--color-text-muted);
+  max-width: 60ch;
+  margin-bottom: var(--space-4);
+}
+
+.aboutSubTitle {
+  font-size: var(--text-h2);
+  margin-bottom: var(--space-3);
+  letter-spacing: var(--letter-spacing-tight);
+  font-family: inherit;
+}
+
+.skillsGrid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.skillsGrid > li {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-card);
+}
+
+.skillsGrid strong {
+  display: block;
+  margin-bottom: var(--space-2);
+  color: var(--color-accent-secondary);
+  font-family: inherit;
+  letter-spacing: var(--letter-spacing-tight);
+}
+
+.skillsGrid ul {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.skillsGrid ul li {
+  color: var(--color-text-muted);
+  font-size: var(--text-caption);
+}
+
+.etcRow {
+  margin-top: var(--space-4);
+  display: flex;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.etcRow span {
+  color: var(--color-accent-deep);
+  font-weight: 600;
+}
+
+
+.etcRow ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.etcRow li {
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+  color: var(--color-text-muted);
+  font-size: var(--text-caption);
+  background: var(--color-surface);
+}

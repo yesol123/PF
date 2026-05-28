@@ -1,0 +1,31 @@
+.homeSection {
+  flex: 1;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.homeName {
+  font-size: var(--text-display);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: var(--letter-spacing-tight);
+  font-family: inherit;
+  color: var(--color-text);
+}
+
+.homeRole {
+  font-size: var(--text-h2);
+  font-weight: 600;
+  font-family: inherit;
+  letter-spacing: var(--letter-spacing-tight);
+  background: var(--gradient-accent);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.homeIntro {
+  max-width: 48ch;
+  color: var(--color-text-muted);
+  margin-bottom: var(--space-3);
+}

@@ -1,0 +1,60 @@
+:root {
+  /* 배경 — 연보라·라벤더 크림 */
+  --color-bg: #f7f4fa;
+  --color-bg-soft: #efe9f8;
+  --color-surface: #fdfcff;
+  --color-surface-alt: #f3eefb;
+
+  /* 텍스트 */
+  --color-text: #3f3a4d;
+  --color-text-muted: #7d7590;
+  --color-on-accent: #faf8fd;
+
+  /* 포인트 — 보라 계열만 */
+  --color-accent: #9b8dc8;
+  --color-accent-secondary: #b8aee0;
+  --color-accent-deep: #7a6fad;
+  --color-accent-soft: #e8e0f5;
+
+  --color-border: #e4dcef;
+
+  /* 타이포 — About 섹션과 동일한 산세리프 스택 */
+  --font-family-base: "Segoe UI", "Noto Sans KR", "Apple SD Gothic Neo", sans-serif;
+  --letter-spacing-tight: 0.01em;
+  --letter-spacing-label: 0.04em;
+
+  --container-width: 1120px;
+  --header-height: 72px;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+
+  --text-display: clamp(2.5rem, 8vw, 7rem);
+  --text-h1: clamp(1.8rem, 3.5vw, 2.6rem);
+  --text-h2: clamp(1.35rem, 2vw, 1.75rem);
+  --text-body: 1rem;
+  --text-caption: 0.85rem;
+
+  --shadow-card: 0 8px 24px rgba(72, 58, 100, 0.08);
+  --gradient-soft: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-accent-secondary) 40%, transparent),
+    color-mix(in srgb, var(--color-accent-soft) 60%, transparent)
+  );
+  --gradient-accent: linear-gradient(
+    135deg,
+    var(--color-accent-deep),
+    var(--color-accent),
+    var(--color-accent-secondary)
+  );
+}
