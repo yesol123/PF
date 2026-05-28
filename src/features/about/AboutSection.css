@@ -1,6 +1,6 @@
 .aboutBody {
   color: var(--color-text-muted);
-  max-width: 60ch;
+  max-width: 100%;
   margin-bottom: var(--space-4);
 }
 
@@ -13,15 +13,17 @@
 
 .skillsGrid {
   display: grid;
-  gap: var(--space-3);
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  width: 100%;
+  gap: var(--space-4);
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
 }
 
 .skillsGrid > li {
+  width: 100%;
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
-  padding: var(--space-4);
+  padding: var(--space-4) var(--space-5);
   box-shadow: var(--shadow-card);
 }
 
@@ -41,9 +43,12 @@
 .skillsGrid ul li {
   color: var(--color-text-muted);
   font-size: var(--text-caption);
+  word-break: keep-all;
+  line-height: 1.6;
 }
 
 .etcRow {
+  width: 100%;
   margin-top: var(--space-4);
   display: flex;
   gap: var(--space-3);

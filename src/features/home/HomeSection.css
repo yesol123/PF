@@ -1,7 +1,12 @@
 .homeSection {
   flex: 1;
   justify-content: center;
+  align-items: flex-start;
   gap: var(--space-3);
+}
+
+.homeSection .buttonLink {
+  width: fit-content;
 }
 
 .homeName {
